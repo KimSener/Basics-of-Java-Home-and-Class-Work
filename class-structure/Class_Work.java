@@ -1,4 +1,3 @@
-
 public class Main {
     public static void main(String[] args) {
         System.out.println(Test.muFanc(10));
@@ -23,3 +22,4 @@ public class Main {
     }
     public static int mainField =3;
 }
+

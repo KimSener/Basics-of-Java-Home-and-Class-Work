@@ -10,7 +10,7 @@ public class Author {
     public int cost;
 
     public String toString() {
-        return name + " (" + nameWriter + ") " + " (" + nameWriterTwo + ") " + " (" + nameWriterThree + ") ";
+        return name;
     }
 
     public int year() {

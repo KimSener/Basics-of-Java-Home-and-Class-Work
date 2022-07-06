@@ -1,10 +1,29 @@
 import java.util.Arrays;
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+      // int[] temps = new int[31];
+       Scanner scanner = new Scanner(System.in);
+       String s = "21 435";
+       s.split(" ");
+       String[] parts = s.split(" ");
+       //int x = 21;
+       //int y = 435;
+       int x = Integer.parseInt(parts[0]);
+       int y =Integer.parseInt(parts[1]);
+        System.out.println(x);
+        System.out.println(y);
+      // while(true) {
+          // System.out.println("Введи день и температуру: day temp или end");
+         //  String line = scanner.nextLine();
+         //  if(line.equals("end")) break;
 
-        int[] arr = {1,14,9,8,81,53};
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
+      // }
+
+
+//        int[] arr = {1,14,9,8,81,53};
+//        Arrays.sort(arr);
+//        System.out.println(Arrays.toString(arr));
 
 //        Person[] people = new Person[3];
 //        people[0] = new Person("Anya", 23);
@@ -34,7 +53,7 @@ public class Main {
 //for(char c: arr) {
 //    System.out.println(c);
 //}
-        
+
 //        int[] arr = new int[5];
 //        int[] arr2 = {0, 1, 4, 9, 16};
 //        /*arr[3] = 14;

@@ -10,7 +10,7 @@ public class Author {
     public int cost;
 
     public String toString() {
-        return name;
+        return name + " (" + nameWriter + ") " + " (" + nameWriterTwo + ") " + " (" + nameWriterThree + ") ";
     }
 
     public int year() {
@@ -35,14 +35,14 @@ public class Author {
     public Author(String name) {
         this.name = name;
         yearPublicationTwo = 1987;
-        nameWriterTwo = "George Lukas";
+        this.nameWriterTwo = "George Lukas";
         this.cost = 8000;
     }
 
     public Author(String name, int cost) {
         this.name = name;
         this.cost = cost;
-        nameWriterThree = "Tim Hard";
+        this.nameWriterThree = "Tim Hard";
         yearPublicationThree = 2008;
     }
 

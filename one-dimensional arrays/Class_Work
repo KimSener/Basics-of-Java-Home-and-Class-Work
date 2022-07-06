@@ -2,23 +2,37 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-      // int[] temps = new int[31];
+       int[] temps = new int[31];
+       boolean[] isFilled = new boolean[temps.length];
        Scanner scanner = new Scanner(System.in);
-       String s = "21 435";
-       s.split(" ");
-       String[] parts = s.split(" ");
+      // String s = "21 435";
+      // s.split(" ");
+       //String[] parts = s.split(" ");
        //int x = 21;
        //int y = 435;
-       int x = Integer.parseInt(parts[0]);
-       int y =Integer.parseInt(parts[1]);
-        System.out.println(x);
-        System.out.println(y);
-      // while(true) {
-          // System.out.println("Введи день и температуру: day temp или end");
-         //  String line = scanner.nextLine();
-         //  if(line.equals("end")) break;
+       //int x = Integer.parseInt(parts[0]);
+      // int y =Integer.parseInt(parts[1]);
+       // System.out.println(x);
+       // System.out.println(y);
+      while(true) {
+           System.out.println("Введи день и температуру: day temp или end");
+           String line = scanner.nextLine();
+           if(line.equals("end")) break;
+           String[] parts =line.split(" ");
+           int day = Integer.parseInt(parts[0])-1;
+           int temp = Integer.parseInt(parts[1]);
+           temps[day] = temp;
+           int filled = 0;
+          isFilled[day] = true;
+           double sum = 0;
+           for (int t:temps) sum += t;
+           for(boolean b:isFilled ) {
+               if(b) filled++;
+           }
+          System.out.println(sum/filled);
 
-      // }
+
+       }
 
 
 //        int[] arr = {1,14,9,8,81,53};

@@ -28,7 +28,6 @@ public class User {
     }
 
 
-
     public static int totalPeople(int totalPeople,int totalPeopleTwo,int totalPeopleThree ) {
         return totalPeople + totalPeopleTwo + totalPeopleThree;
     }

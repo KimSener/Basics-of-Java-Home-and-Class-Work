@@ -11,9 +11,9 @@ public class Test {
                 System.out.println("Программа завершена!!!");
                 break;
             }
-            long value1 = Long.parseLong(input);
+            long valueOne = Long.parseLong(input);
             System.out.println("Введите второе число");
-            long value2 = Long.parseLong(scanner.next().trim());
+            long valueTwo = Long.parseLong(scanner.next().trim());
             System.out.println("Выберите операцию abs, div, div_round, pow");
             Operation operation = Operation.valueOf(scanner.next().trim());
             calculate(valueOne, valueTwo, operation);

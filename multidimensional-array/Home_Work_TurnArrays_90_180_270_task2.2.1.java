@@ -1,11 +1,11 @@
 import java.util.Random;
 
 public class Main {
-    public static final int size = 8;
+    public static final int SIZE = 8;
 
     public static void main(String[] args) {
 
-        int[][] colors = new int[size][size];
+        int[][] colors = new int[SIZE][SIZE];
         createArray(colors);
         System.out.println("Случайная Матрица");
         printMatrix(colors);
@@ -19,16 +19,16 @@ public class Main {
 
     public static void createArray(int[][] colors) {
         Random random = new Random();
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
                 colors[i][j] = random.nextInt(256);
             }
         }
     }
 
     public static void printMatrix(int[][] colors) {
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
 
                 System.out.format("%4d", colors[i][j]);
 
@@ -39,9 +39,9 @@ public class Main {
     }
 
     public static int[][] turnArray(int[][] colors) {
-        int[][] rotatedColors = new int[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+        int[][] rotatedColors = new int[SIZE][SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
                 rotatedColors[j][size - i - 1] = colors[i][j];
 
             }

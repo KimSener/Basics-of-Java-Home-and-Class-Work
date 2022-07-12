@@ -15,7 +15,7 @@ public class Store {
         while (true) {
             System.out.println("Выберите товар и количество шт или введите `end`");
             String inputString = scanner.nextLine();
-            if (inputString.equals("end")) {
+            if ("end".equals(inputString)) {
                 break;
             }
             int productNumber = Integer.parseInt(inputString);

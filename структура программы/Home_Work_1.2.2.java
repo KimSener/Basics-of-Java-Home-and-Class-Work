@@ -12,12 +12,12 @@ public class Main {
     System.out.println("Площадь круга: " + area +  " см.кв.");
     System.out.println("Длина окружности: " + length +  " см.");
   }
-  public static final double pi = 3.14;
+  public static final double PI = 3.14;
   public static double calculateCircleArea(int radius) {
-    return  pi * radius * radius;
+    return  PI * radius * radius;
   }
   public static double calculateCircleLength(int radius) {
-    return 2 * pi * radius;
+    return 2 * PI * radius;
   }
 
 }

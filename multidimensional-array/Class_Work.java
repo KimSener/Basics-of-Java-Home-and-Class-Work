@@ -1,23 +1,82 @@
 public class Main {
     public static void main(String[] args) {
 
+        public static final int size = 5;
+    public static final char empty = '-';
+    public static final char cross = 'X';
+    public static final char zero = 'O';
+
+    public static void main(String[] args) {
         char[][] field = new char[size][size];
-        for (int i = 0; i < field.length; i++) {
+        for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 field[i][j] = empty;
             }
         }
-        print(field);
 
-        public static void print ( char[][] field){
-            for (int i = 0; i < size; i++) {
-                for (int j = 0; j < size; j++) {
-                    System.out.print(field[i][j]);
-                }
-                System.out.println();
+        Scanner scanner = new Scanner(System.in);
+
+        boolean isCrossTurn = true;
+
+        while (true) {
+            printField(field);
+            System.out.println("Ходят " + (isCrossTurn ? "крестики" : "нолики") + "!");
+            String input = scanner.nextLine(); // "2 3"
+            String[] parts = input.split(" "); // ["2" , "3"]
+            int r = Integer.parseInt(parts[0]) - 1; // 2-1 = 1
+            int c = Integer.parseInt(parts[1]) - 1; // 3-1 = 2
+
+            if (field[r][c] != empty) {
+                System.out.println("Сюда ходить нельзя");
+                continue;
             }
 
+            field[r][c] = isCrossTurn ? cross : zero;
+            if (isWin(field, isCrossTurn ? cross : zero)) {
+                printField(field);
+                System.out.println("Победили " + (isCrossTurn ? "крестики" : "нолики"));
+                break;
+            } else {
+                isCrossTurn = !isCrossTurn;
+
+            }
         }
+
+        System.out.println("Игра закончена!");
+
+    }
+
+    public static boolean isWin(char[][] field, char player) {
+        if (field[0][0] == player && field[0][1] == player && field[0][2] == player)
+            return true;
+        if (field[1][0] == player && field[1][1] == player && field[1][2] == player)
+            return true;
+        if (field[2][0] == player && field[2][1] == player && field[2][2] == player)
+            return true;
+
+        if (field[0][0] == player && field[1][0] == player && field[2][0] == player)
+            return true;
+        if (field[0][1] == player && field[1][1] == player && field[2][1] == player)
+            return true;
+        if (field[0][2] == player && field[1][2] == player && field[2][2] == player)
+            return true;
+
+        if (field[0][0] == player && field[1][1] == player && field[2][2] == player)
+            return true;
+        return field[2][0] == player && field[1][1] == player && field[0][2] == player;
+    }
+
+    public static void printField(char[][] field) {
+        for (char[] row : field) {
+            for (char cell : row) {
+                System.out.print(cell + " ");
+            }
+            System.out.println();
+        }
+    }
+
+
+}
 
 //        int[][][] arrThree = new int[3][4][2];
 //        System.out.println(Arrays.deepToString(arrThree));

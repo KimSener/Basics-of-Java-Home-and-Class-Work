@@ -1,6 +1,7 @@
 
 public class Book {
-    private final String title;
+    private final String title;   //Т.к. массив – это объект, то final означает, что после присвоения ссылки на объект, 
+                                  //уже нельзя ее изменить, но можно изменять состояние объекта.
     private final Genre[] genres;
 
     public Book(String title, Genre[] genres) {

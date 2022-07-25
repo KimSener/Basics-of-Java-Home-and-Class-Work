@@ -4,14 +4,14 @@ public class UserReader extends User implements Librarian {
 
 
     public UserReader() {
-        super("Super Man", "Tom", "Nina", "Marry", "Harry");
+        super("Super Man", "Tom", "Nika", "Marina", "Paul");
 
 
     }
 
     @Override
     public void ordersBooks() {
-        System.out.print("Библиотекарь" + " " + nameLibrarian + " " + "заказала книгу" + " " + nameBook + " ");
-        System.out.print("у Поставщика книг" + " " + nameSupplier + " " + "лично для Читателя" + " " + nameReader);
+        System.out.print("Библиотекарь" + " " + getNameLibrarian() + " " + "заказала книгу" + " " + getNameBook() + " ");
+        System.out.print("у Поставщика книг" + " " + nameSupplier + " " + "лично для Читателя" + " " + getNameReader());
     }
 }

@@ -2,14 +2,14 @@ package Interfaces;
 
 public class UserAdministrator extends User implements Supplier {
 
-
     public UserAdministrator() {
-        super("Lord of the Rings", "Tom", "Nina", "Marry", "Harry");
+        super("Lord of The Rings", "Rob", "Nona", "Viktoriya", "Ali");
     }
 
     @Override
     public void bringsBookstoreLibrary() {
-        System.out.print("Поставщик" + " " + nameSupplier + " " + "заказал книгу" + " " + nameBook + " ");
-        System.out.print("для Администратора" + " " + nameAdmin);
+        System.out.print("Поставщик" + " " + getNameSupplier() + " " + "заказал книгу" + " " + getNameBook() + " ");
+        System.out.print("для Администратора" + " " + getNameAdmin());
     }
 }
+

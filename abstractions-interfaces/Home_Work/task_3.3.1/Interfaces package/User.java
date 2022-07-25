@@ -1,6 +1,6 @@
 package Interfaces;
 
-public abstract class User {
+public class User {
 
 
     protected String nameBook;
@@ -8,15 +8,6 @@ public abstract class User {
     protected String nameLibrarian;
     protected String nameAdmin;
     protected String nameSupplier;
-
-
-    public void setNameBook(String nameBook) {
-        this.nameBook = nameBook;
-    }
-
-    public String getNameBook() {
-        return nameBook;
-    }
 
     public User(String nameBook, String nameReader, String nameLibrarian, String nameAdmin, String nameSupplier) {
         this.nameAdmin = nameAdmin;
@@ -27,4 +18,26 @@ public abstract class User {
 
 
     }
+
+    public String getNameBook() {
+        return nameBook;
+    }
+
+    public String getNameReader() {
+        return nameReader;
+    }
+
+    public String getNameLibrarian() {
+        return nameLibrarian;
+    }
+
+    public String getNameAdmin() {
+        return nameAdmin;
+    }
+
+    public String getNameSupplier() {
+        return nameSupplier;
+    }
+
+
 }

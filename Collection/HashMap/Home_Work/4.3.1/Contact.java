@@ -1,7 +1,7 @@
 
 public class Contact {
-    private final String name;
-    private final String phoneNumber;
+    private String name;
+    private String phoneNumber;
 
 
     public Contact(String name, String phoneNumber) {

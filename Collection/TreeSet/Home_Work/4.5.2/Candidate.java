@@ -1,6 +1,3 @@
-package HomeWork;
-
-
 public class Candidate {
     private final String fullName;
     private final String age;

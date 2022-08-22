@@ -1,5 +1,3 @@
-package ClassWork;
-
 import java.util.Comparator;
 
 public class CountryNameComparator implements Comparator<Country> {

@@ -1,6 +1,3 @@
-package ClassWork;
-
-
 public class Country implements Comparable<Country> {
     protected String name;
     protected int population;

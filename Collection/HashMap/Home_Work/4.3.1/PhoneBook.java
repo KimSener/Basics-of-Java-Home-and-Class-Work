@@ -38,20 +38,5 @@ public class PhoneBook {
         }
         return stringBuilder.toString();
     }
-
-    public Contact findContact(String phoneNumber) {
-        for (List<Contact> contacts : contact.values()) {
-            for (Contact contactOne : contacts) {
-                if (contactOne.getPhoneNumber().equals(phoneNumber)) {
-                    return contactOne;
-                }
-            }
-
-
-        }
-        return null;
-    }
-
-
 }
 

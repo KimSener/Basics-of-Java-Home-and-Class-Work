@@ -1,6 +1,6 @@
 public class Candidate {
-    private final String fullName;
-    private final String age;
+    private String fullName;
+    private String age;
     private Integer relevance;
 
     private Integer rating;

@@ -1,4 +1,4 @@
-public class Student {
+public final class Student {
     private String name;
     private String group;
     private final String studentId;
